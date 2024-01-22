@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Maximiliano Joaquin Carrillo">
+    <meta name="description" content="Pagina de practica de DH inspirada en Mercado Libre">
+    <title>Mercado Liebre</title>
+
+    <script src="https://kit.fontawesome.com/750a5cf973.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logoTitulo">
+            <h1 class="header__titulo">Mercado Liebre</h1>
+            <figure class="figurecontainer">
+                <img src="/images/logo-mercado-liebre.svg" alt="Logo Mercado Liebre" title="Mercado Liebre"
+                    class="logoMercadoLiebre">
+            </figure>
+            <section>
+                <form>
+                    <input type="text" placeholder="Buscar productos o marcas" class="inputHeader">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </section>
+            <p class="header__descripcion"><i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin
+                tarjeta de credito</p>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar__lista">
+                <li><a href="/">Ofertas</a></li>
+                <li><a href="/">Tiendas Oficiales</a></li>
+                <li><a href="/">Vender</a></li>
+                <li><a href="/">Ayuda</a></li>
+            </ul>
+            <ul class="navbar__lista">
+                <li><a href="/register">Crea tu cuenta <i class="fa-regular fa-address-card"></i></a></li>
+                <li><a href="/login">Ingresa <i class="fa-solid fa-right-to-bracket"></i></a></li>
+                <li><a href="#">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
+            </ul>
+        </nav>
+        <div class="burger-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <figure class="bannerHome">
+        <img src="/images/img-home-banner.jpg" alt="Banner de MercadoLiebre">
+    </figure>
+    <main>
+        <section class="sectionForm">
+            <form>
+                <div>
+                    <label for="nameAndLastName" class="form__label">Nombre y Apellido</label>
+                    <input type="text" id="nameAndLastName" name="nameAndLastName" placeholder="Maximiliano Carrillo" class="form__input" minlength="2" required>
+                </div>
+                <div>
+                    <label for="username" class="form__label">Nombre de Usuario</label>
+                    <input type="text" id="username" name="username" placeholder="carrillomaxj" class="form__input" minlength="2" required>
+                </div>
+                <div>
+                    <label for="email" class="form__label">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="maxi11carrillo@gmail.com" class="form__input" required>
+                </div>
+                <div>
+                    <label for="birdate" class="form__label">Fecha de Nacimiento</label>
+                    <input type="date" id="birdate" name="birdate" class="form__input">
+                </div>
+                <div>
+                    <label for="domicilio" class="form__label">Domicilio</label>
+                    <input type="text" id="domicilio" name="domicilio" placeholder="Av. Charly Garcia 123" class="form__input" minlength="2" required>
+                </div>
+                <div>
+                    <label class="form__label">Perfil del Usuario</label>
+                    <div class="groupRadio">
+                        <div>
+                            <input type="radio" id="radioSi" name="perfilUsuario" value="si" checked>
+                            <label for="radioSi">Sí</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="radioNo" name="perfilUsuario" value="no">
+                            <label for="radioNo">No</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label class="form__label">Intereses</label>
+                    <div class="groupCheckbox">
+                        <div>
+                            <input type="checkbox" id="electro" name="intereses" value="electro" checked>
+                            <label for="electro">Electro</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="moda" name="intereses" value="moda">
+                            <label for="moda">Moda</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="hogar" name="intereses" value="hogar">
+                            <label for="hogar">Hogar</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="jugueteria" name="intereses" value="jugueteria">
+                            <label for="jugueteria">Juguetería</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="vidaSana" name="intereses" value="vida sana">
+                            <label for="vidaSana">Vida Sana</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="userPhoto" class="form__label">Foto de Usuario</label>
+                    <input type="file" id="userPhoto" name="userPhoto" accept=".jpg" class="form__file">
+                </div>
+                <div>
+                    <label for="password" class="form__label">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="•••••••••" class="form__input" minlength="8" required>
+                </div>
+                <div>
+                    <label for="passwordRepeat" class="form__label">Confirmar Contraseña</label>
+                    <input type="password" id="passwordRepeat" name="passwordRepeat"  placeholder="•••••••••" class="form__input" minlength="8" required>
+                </div>
+                <div>
+                    <button type="submit" class="buttonForm--blue">Enviar</button>
+                    <button type="reset" class="buttonForm--gray">Limpiar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <section>
+            <i class="fa-solid fa-credit-card footer__icon"></i>
+            <h4>Paga con Tarjeta o Efectivo</h4>
+            <p>Con MercadoLiebreCash tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es
+                seguro!</p>
+        </section>
+        <section>
+            <i class="fa-solid fa-gift footer__icon"></i>
+            <h4>Envio gratis desde los $2.500</h4>
+            <p>Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de procutos. Es un beneficio de
+                Mercado Puntos.</p>
+        </section>
+        <section>
+            <i class="fa-solid fa-user-shield footer__icon"></i>
+            <h4>Seguridad de principcio a fin</h4>
+            <p>¿No te gusta? ¡Devolvelo! En MercadoLiebre no hay nada que no puedas hacer porque estás siempre
+                protegid@.</p>
+        </section>
+        <p>Copyright &copy; 1999-2020 MercadoLiebre S.R.L.</p>
+    </footer>
+</body>
+
+</html>

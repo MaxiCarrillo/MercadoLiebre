@@ -1,0 +1,80 @@
+.sectionForm{
+    margin-inline: auto;
+    margin-block: 50px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form__label{
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: block;
+}
+
+.form__input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-block: 5px 10px;
+    border: 1px solid gray;
+}
+
+.form__file{
+    width: 100%;
+    margin-block: 5px 10px;
+}
+
+.groupRadio{
+    margin-block: 5px 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.groupCheckbox{
+    margin-block: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.buttonForm--blue{
+    width: 100%;
+    background-color: #1259c3;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #0e4aa3;
+    }   
+
+    &:active{
+        background-color: #0c3d82;
+    }
+}
+
+.buttonForm--gray{
+    width: 100%;
+    background-color: #ebebeb;
+    color: #666;
+    font-weight: 600;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #d9d9d9;
+    }   
+
+    &:active{
+        background-color: #c7c7c7;
+    }
+}
+
+.buttonForm--blue + .buttonForm--gray{
+    margin-top: 10px;
+}

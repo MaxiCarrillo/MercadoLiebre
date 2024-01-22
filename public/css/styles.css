@@ -1,0 +1,276 @@
+:root {
+    --color-yellow: #EAC926;
+    --color-blue: #03264C;
+    --color-light-blue: #1259c3;
+    --color-dark-grey: #666;
+    --color-light-grey: #ebebeb;
+    --color-green: #39b54a;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 12px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+li > a {
+    color: #202020;
+    text-decoration: none;
+}
+
+.header {
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: var(--color-yellow);
+}
+
+.header__logoTitulo{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px 0;
+} 
+
+.header__titulo {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.figurecontainer {
+    width: 50%;
+}
+
+.logoMercadoLiebre{
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.header__logoTitulo > section{
+    box-sizing: border-box;
+    padding-inline-start: 4px;
+    width: 50%;
+}
+
+.inputHeader{
+    width: 80%;
+}
+
+.header__descripcion {
+    flex-basis: 100%;
+    flex-grow: 2;
+
+    text-align: center;
+}
+
+.navbar{
+    display: none;
+}
+
+.burger-menu {
+    margin-top: 18px;
+    margin-inline: auto;
+    width: 50px;
+    height: 50px;
+
+    background-color: var(--color-light-blue);
+    color: var(--color-light-grey);
+
+    border-radius: 10px;
+    border: none;
+
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--color-blue);
+    }
+
+    display: grid;
+    place-content: center;
+}
+
+.bannerHome {
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bannerHome img {
+    width: 100%;
+    object-fit: contain;
+}
+
+main {
+    margin-inline: auto;
+    width: 90%;
+}
+
+.titulo {
+    margin-block: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.sectionOfertas {
+    margin-top: 50px;
+}
+
+.containerProductos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.producto {
+    flex-grow: 1;
+    box-sizing: border-box;
+    overflow: hidden;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.producto__cajaGeneral {
+    box-sizing: border-box;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.imgProductoContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.producto__img {
+    width: 100%;
+    max-width: 250px;
+}
+
+.producto__envio {
+    display: inline-block;
+    border: 1px solid var(--color-green);
+    color: var(--color-green);
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.producto__precio {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.producto__descuento {
+    font-size: 16px;
+    color: var(--color-green);
+    margin-top: 2px;
+}
+
+.producto__descripcion {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: var(--color-light-grey);
+}
+
+.footer__icon {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--color-light-blue);
+}
+
+.product-desc-box >.product-delivery-icon {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    color: #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.product-desc-box {
+    position: relative;
+}
+
+.precioDescuentoContainer{
+    margin-top: 24px;
+    display: flex;
+    gap: 10px;
+}
+
+@media (width > 480px) {
+
+    .navbar{
+        margin-top: 16px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .navbar__lista{
+        display: block;
+        list-style: none;
+        padding: 0;
+    }
+
+    .producto {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .burger-menu {
+        display: none;
+    }
+}
+
+@media (width > 768px){
+
+    .header__logoTitulo{
+        flex-wrap: nowrap;
+        gap: 5px;
+    }
+
+    .figurecontainer {
+        flex-basis: 50%;
+    }
+
+    .header__logoTitulo > section{
+        flex-basis: 50%;
+    }
+
+    .header__descripcion {
+        flex-basis: 50%;
+    }
+
+    .navbar__lista{
+        display: flex;
+        gap: 24px;
+        list-style: none;
+        padding: 0;
+    }
+}
