@@ -143,6 +143,19 @@ main {
     box-sizing: border-box;
     overflow: hidden;
     outline: 1px solid rgba(0, 0, 0, 0.1);
+    transition: box-shadow 300ms ease-in-out;
+
+    & > .producto__cajaGeneral > .producto__descripcion {
+        color: rgb(102, 102, 102, 0);
+        transition: color 300ms ease;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 10px rgb(0, 0, 0);
+        .producto__cajaGeneral > .producto__descripcion {
+            color: rgb(102, 102, 102, 1);;
+        }
+    }
 }
 
 .producto__cajaGeneral {
@@ -184,23 +197,32 @@ main {
     margin-top: 10px;
     font-size: 16px;
     font-weight: 400;
-    color: #666;
 }
 
 .footer {
     margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
     text-align: center;
     background-color: var(--color-light-grey);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .footer__icon {
+    margin-bottom: 5px;
     font-size: 2em;
-    margin-top: 20px;
-    margin-bottom: 10px;
     color: var(--color-light-blue);
+    transition: color 200ms ease;
+
+    &:hover {
+        color: var(--color-blue);
+    }
 }
 
 .product-desc-box >.product-delivery-icon {
+    margin-top: 5px;
     display: block;
     font-size: 16px;
     padding: 5px;
@@ -213,6 +235,11 @@ main {
     position: absolute;
     right: 20px;
     top: -15px;
+    transition: transform 350ms ease-in-out;
+
+    &:hover {
+        transform: rotate(-90deg);
+    }
 }
 
 .product-desc-box {
@@ -230,7 +257,7 @@ main {
     .navbar{
         margin-top: 16px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .navbar__lista{
@@ -245,6 +272,20 @@ main {
 
     .burger-menu {
         display: none;
+    }
+
+    .footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        & > section {
+            flex-grow: 1;
+            flex-basis: 200px;
+        }
+
+        & > p{
+            flex-basis: 100%;
+        }
     }
 }
 
